@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Our Memories ❤️</title>
 
 <style>
@@ -15,10 +16,10 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(to bottom,#ffb6c1,#ffe4ec);
-overflow-x:hidden;
-text-align:center;
+background:linear-gradient(180deg,#ff9a9e,#fad0c4);
 color:white;
+text-align:center;
+overflow-x:hidden;
 }
 
 #welcome{
@@ -33,13 +34,13 @@ padding:20px;
 h1{
 font-size:45px;
 margin-bottom:20px;
-text-shadow:2px 2px 8px black;
+text-shadow:2px 2px 8px #000;
 }
 
-p{
+.intro{
 font-size:20px;
-max-width:700px;
-margin:auto;
+max-width:600px;
+line-height:1.5;
 }
 
 button{
@@ -47,150 +48,212 @@ margin-top:30px;
 padding:15px 35px;
 border:none;
 border-radius:50px;
-font-size:20px;
-cursor:pointer;
 background:white;
-color:#ff4f8b;
+color:#ff4f81;
+font-size:20px;
 font-weight:bold;
-transition:.3s;
+cursor:pointer;
 }
 
 button:hover{
-transform:scale(1.08);
+transform:scale(1.05);
 }
+
 
 #main{
 display:none;
 padding:30px;
 }
 
+
 .memory{
-margin:80px auto;
-max-width:700px;
+background:rgba(255,255,255,0.2);
+padding:20px;
+border-radius:25px;
+margin:50px auto;
+max-width:600px;
 animation:fade 2s;
 }
+
 
 .memory img{
 width:100%;
 border-radius:20px;
-box-shadow:0 0 25px rgba(0,0,0,.4);
+box-shadow:0 0 20px rgba(0,0,0,.4);
 }
+
 
 .memory p{
-margin-top:15px;
 font-size:22px;
+margin-top:15px;
 }
 
+
+video{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+
 @keyframes fade{
+
 from{
 opacity:0;
-transform:translateY(40px);
+transform:translateY(50px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
 }
+
 }
+
 
 .heart{
 position:fixed;
-color:red;
+bottom:-20px;
 font-size:25px;
-animation:float 8s linear forwards;
-pointer-events:none;
+animation:float 7s linear forwards;
 }
+
 
 @keyframes float{
+
 0%{
-transform:translateY(100vh);
+transform:translateY(0);
 opacity:1;
 }
+
 100%{
-transform:translateY(-120vh);
+transform:translateY(-110vh);
 opacity:0;
 }
+
 }
 
+
 #ending{
-padding:100px 20px;
-font-size:35px;
-font-weight:bold;
 display:none;
+font-size:30px;
+padding:80px 20px;
+font-weight:bold;
 }
 
 </style>
+
 </head>
 
 <body>
+
 
 <div id="welcome">
 
 <h1>Our Memories ❤️</h1>
 
-<p>
-Every picture tells a story...
-Every laugh became a memory...
-I'm so grateful for every moment we've shared together.
+<p class="intro">
+Every photo holds a memory...
+Every laugh tells a story...
+I'm grateful for every moment we've shared together. ❤️
 </p>
 
+
 <button onclick="startMemories()">
-Open Our Memories ❤️
+Open Our Memories 💕
 </button>
 
 </div>
 
+
 <div id="main">
 
-<div class="memory">
-<img src="motion_photo_5917562940856979364.jpg">
-<p>Remember this day? 😂❤️</p>
-</div>
 
 <div class="memory">
-<img src="motion_photo_5867927664802001379.jpg">
-<p>One of my favorite memories with you. ❤️</p>
+<img src="IMG-20250327-WA0088.jpg">
+<p>A memory worth keeping ❤️</p>
 </div>
 
-<div class="memory">
-<img src="IMG-20260425-WA0159.jpg">
-<p>This moment will always be special. ✨</p>
-</div>
 
 <div class="memory">
-<img src="IMG-20260425-WA0131.jpg">
-<p>We really make the best memories together. ❤️</p>
+<img src="IMG-20250516-WA0009.jpg">
+<p>One of our special moments ✨</p>
 </div>
 
+
 <div class="memory">
-<img src="IMG-20251214-WA0032.jpg">
-<p>Another memory I'll never forget. 💕</p>
+<img src="IMG-20250626-WA0044.jpg">
+<p>Never
+  <div class="memory">
+<img src="IMG-20250905-WA0044.jpg">
+<p>Another moment I'll always remember ❤️</p>
 </div>
+
+
+<div class="memory">
+<img src="IMG-20250905-WA0050.jpg">
+<p>These memories mean so much to me 🥹</p>
+</div>
+
+
+<div class="memory">
+<img src="IMG-20251203-WA0026.jpg">
+<p>Laughs, memories, and good times ✨</p>
+</div>
+
+
+<div class="memory">
+<img src="IMG-20251205-WA0019.jpg">
+<p>A little moment that became a memory ❤️</p>
+</div>
+
+
+<div class="memory">
+<img src="IMG-20251205-WA0021.jpg">
+<p>Forever grateful for these moments 💕</p>
+</div>
+
+
+<div class="memory">
+<img src="IMG-20251213-WA0044.jpg">
+<p>More memories to keep forever ❤️</p>
+</div>
+
+
+<div class="memory">
+<img src="IMG-20251213-WA0059.jpg">
+<p>Another chapter of our story ✨</p>
+</div>
+
 
 <div class="memory">
 <img src="IMG-20251213-WA0063.jpg">
-<p>More laughs, more memories, more moments. 🥹❤️</p>
+<p>One of my favorites 🥹❤️</p>
 </div>
+
+
 <div class="memory">
-
-<video controls width="100%" style="border-radius:20px;">
-<source src="VID-20251208-WA0075.mp4" type="video/mp4">
-</video>
-
-<p>Another memory I will never forget 🥹❤️</p>
-
+<img src="IMG-20251214-WA0032.jpg">
+<p>A memory I'll never forget 💖</p>
 </div>
-  <div class="memory">
 
-<video controls width="100%" style="border-radius:20px;">
-<source src="VID-20251208-WA0075.mp4" type="video/mp4">
-</video>
 
-<p>Another memory I will never forget 🥹❤️</p>
+<div class="memory">
+<img src="IMG-20260425-WA0131.jpg">
+<p>Our memories will always matter ❤️</p>
+</div>
 
-  </div>
+
 <audio id="music" loop>
 <source src="childhood.mp3" type="audio/mp3">
 </audio>
+
+
+<div id="ending">
+
+Thank you for being part of my memories ❤️✨
+
+</div>
 <script>
 
 function startMemories(){
@@ -199,42 +262,49 @@ document.getElementById("welcome").style.display="none";
 
 document.getElementById("main").style.display="block";
 
+
 let music = document.getElementById("music");
 
 music.play();
 
+
 createHearts();
 
-setTimeout(()=>{
+
+setTimeout(function(){
 
 document.getElementById("ending").style.display="block";
 
-},15000);
+},20000);
+
 
 }
 
 
 function createHearts(){
 
-setInterval(()=>{
+setInterval(function(){
 
-let heart=document.createElement("div");
+let heart = document.createElement("div");
 
 heart.className="heart";
 
 heart.innerHTML="❤️";
 
-heart.style.left=Math.random()*100+"vw";
 
-heart.style.fontSize=(15+Math.random()*35)+"px";
+heart.style.left = Math.random()*100 + "vw";
 
-heart.style.animationDuration=(4+Math.random()*5)+"s";
+
+heart.style.fontSize = (15 + Math.random()*35) + "px";
+
+
+heart.style.animationDuration = (4 + Math.random()*5) + "s";
 
 
 document.body.appendChild(heart);
 
 
-setTimeout(()=>{
+setTimeout(function(){
 
 heart.remove();
 
@@ -247,5 +317,9 @@ heart.remove();
 
 </script>
 
+
+</div>
+
 </body>
+
 </html>
