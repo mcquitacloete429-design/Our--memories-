@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Memories ❤️</title>
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(to bottom,#ffb6c1,#ffe4ec);
+overflow-x:hidden;
+text-align:center;
+color:white;
+}
+
+#welcome{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+h1{
+font-size:45px;
+margin-bottom:20px;
+text-shadow:2px 2px 8px black;
+}
+
+p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
+
+button{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-size:20px;
+cursor:pointer;
+background:white;
+color:#ff4f8b;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+#main{
+display:none;
+padding:30px;
+}
+
+.memory{
+margin:80px auto;
+max-width:700px;
+animation:fade 2s;
+}
+
+.memory img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 25px rgba(0,0,0,.4);
+}
+
+.memory p{
+margin-top:15px;
+font-size:22px;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.heart{
+position:fixed;
+color:red;
+font-size:25px;
+animation:float 8s linear forwards;
+pointer-events:none;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+#ending{
+padding:100px 20px;
+font-size:35px;
+font-weight:bold;
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="welcome">
+
+<h1>Our Memories ❤️</h1>
+
+<p>
+Every picture tells a story...
+Every laugh became a memory...
+I'm so grateful for every moment we've shared together.
+</p>
+
+<button onclick="startMemories()">
+Open Our Memories ❤️
+</button>
+
+</div>
+
+<div id="main">
+
+<div class="memory">
+<img src="photo1.jpg">
+<p>Remember this day? 😂❤️</p>
+</div>
+
+<div class="memory">
+<img src="photo2.jpg">
+<p>One of my favorite memories with you.</p>
+</div>
+
+<div class="memory">
+<img src="photo3.jpg">
+<p>I wish we could relive this day forever.</p>
+</div>
+
+<div class="memory">
+<img src="photo4.jpg">
+<p>We really make the best memories together. ❤️</p>
+</div>
+
+<div id="ending">
+
+Thank you for being part of my life ❤️
+
+</div>
+
+</div>
+
+<audio id="music" loop>
+<source src="song.mp3" type="audio/mp3">
+</audio>
+<script>
+
+function startMemories(){
+
+document.getElementById("welcome").style.display="none";
+
+document.getElementById("main").style.display="block";
+
+let music = document.getElementById("music");
+
+music.play();
+
+createHearts();
+
+setTimeout(()=>{
+
+document.getElementById("ending").style.display="block";
+
+},15000);
+
+}
+
+
+function createHearts(){
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*35)+"px";
+
+heart.style.animationDuration=(4+Math.random()*5)+"s";
+
+
+document.body.appendChild(heart);
+
+
+setTimeout(()=>{
+
+heart.remove();
+
+},9000);
+
+
+},500);
+
+}
+
+</script>
+
+</body>
+</html>
